@@ -27,8 +27,8 @@ func HandleArguments() {
 		}
 
 		// TODO: read from file
-		output := generateQuery(string(data))
-		fmt.Println(output)
+		// output := generateQuery(string(data))
+		fmt.Println(data)
 		os.Exit(0)
 	}
 
