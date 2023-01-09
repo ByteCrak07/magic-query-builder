@@ -1,0 +1,5 @@
+name.first_name = "Sam"
+address.country = "United Kingdom"
+interests.[].sport.name = "football"
+ingredients.[].milk.[].calcium = 10
+info.[].transport.[] = "car"
