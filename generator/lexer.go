@@ -1,7 +1,6 @@
 package generator
 
 import (
-	"fmt"
 	"regexp"
 )
 
@@ -51,6 +50,5 @@ func generateTokens(query string) []Token {
 
 	}
 
-	fmt.Println(tokenStream)
 	return tokenStream
 }

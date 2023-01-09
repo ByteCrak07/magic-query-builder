@@ -2,17 +2,21 @@ package cli
 
 import (
 	"fmt"
+	"io/ioutil"
+	"magic-query/generator"
 	"os"
 	"strings"
 )
 
 func HandleArguments() {
+	// stop execution of fn if no arguments are provided
 	if len(os.Args) == 1 {
 		return
 	}
 
 	arg := os.Args[1]
 
+	// if a flag is provided as arguments else argument is a filename
 	if strings.HasPrefix(arg, "-") {
 		if arg == "--help" {
 			printHelp()
@@ -20,15 +24,18 @@ func HandleArguments() {
 			printArgError()
 		}
 	} else {
-		data, err := os.ReadFile(arg)
+		fileBytes, err := ioutil.ReadFile(arg)
+
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
 		}
 
-		// TODO: read from file
-		// output := generateQuery(string(data))
-		fmt.Println(data)
+		// split each line in the file to string slices
+		sliceData := strings.Split(string(fileBytes), "\n")
+		output := generator.HandleQuery(sliceData)
+
+		fmt.Println(output)
 		os.Exit(0)
 	}
 

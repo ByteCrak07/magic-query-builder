@@ -33,10 +33,11 @@ func RunShell() {
 	}
 }
 
+// for clearing >>> from executing input fn previously
 func deletePreviousLine() {
-	// const LINE_UP = "\033[1A"
-	// const LINE_CLEAR = "\x1b[2K"
-	// fmt.Print(LINE_UP, LINE_CLEAR)
+	const LINE_UP = "\033[1A"
+	const LINE_CLEAR = "\x1b[2K"
+	fmt.Print(LINE_UP, LINE_CLEAR)
 }
 
 func getInput() string {
