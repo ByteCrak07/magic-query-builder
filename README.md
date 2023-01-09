@@ -32,4 +32,14 @@ To run the CLI, open a terminal and navigate to the project directory.
 ./magic-query-builder --help
 ```
 
-## Made with [<img height="20" style="margin-bottom:-3px" src="https://go.dev/images/go-logo-blue.svg">](https://go.dev)
+To run the CLI without building the executable use:
+
+```bash
+# Interactive shell
+go run .
+
+# Help
+go run . --help
+```
+
+## Made with [<img height="20" style="margin-bottom:-2px" src="https://go.dev/images/go-logo-blue.svg">](https://go.dev)
