@@ -23,13 +23,13 @@ To run the CLI, open a terminal and navigate to the project directory.
 
 ```bash
 # To launch the interactive shell
-./magic-query-builder
+./magic-query
 
 # To read queries from a file (refer example.txt)
-./magic-query-builder <file>
+./magic-query <file>
 
 # To see the usage instructions, use the --help flag
-./magic-query-builder --help
+./magic-query --help
 ```
 
 To run the CLI without building the executable use:
@@ -42,4 +42,4 @@ go run .
 go run . --help
 ```
 
-## Made with [<img height="20" style="margin-bottom:-2px" src="https://go.dev/images/go-logo-blue.svg">](https://go.dev)
+## Made with [<img height="20" style="margin-bottom:-1px" src="https://go.dev/images/go-logo-blue.svg">](https://go.dev)

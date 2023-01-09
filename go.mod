@@ -1,3 +1,3 @@
-module magic-query-builder
+module magic-query
 
 go 1.19

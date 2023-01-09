@@ -1,4 +1,4 @@
-package main
+package cli
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func runShell() {
+func RunShell() {
 	fmt.Println("Magic Query Builder")
 	fmt.Printf("Welcome to Interactive shell. Use Ctrl+C to close the shell or use \"%v --help\" for help\n", os.Args[0])
 

@@ -1,4 +1,4 @@
-package main
+package cli
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func handleArguments() {
+func HandleArguments() {
 	if len(os.Args) == 1 {
 		return
 	}
