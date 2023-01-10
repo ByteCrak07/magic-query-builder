@@ -1,8 +1,6 @@
 package generator
 
-import (
-	"regexp"
-)
+import "regexp"
 
 type Token struct {
 	Type  string

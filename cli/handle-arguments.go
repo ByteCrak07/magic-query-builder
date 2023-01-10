@@ -2,7 +2,6 @@ package cli
 
 import (
 	"fmt"
-	"io/ioutil"
 	"magic-query/generator"
 	"os"
 	"strings"
@@ -24,7 +23,7 @@ func HandleArguments() {
 			printArgError()
 		}
 	} else {
-		fileBytes, err := ioutil.ReadFile(arg)
+		fileBytes, err := os.ReadFile(arg)
 
 		if err != nil {
 			fmt.Println(err)
