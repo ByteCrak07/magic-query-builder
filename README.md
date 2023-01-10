@@ -28,6 +28,9 @@ To run the CLI, open a terminal and navigate to the project directory.
 # To read queries from a file (refer example.txt)
 ./magic-query <file>
 
+# To start the HTTP server (send POST req to generate query)
+./magic-query --serve
+
 # To see the usage instructions, use the --help flag
 ./magic-query --help
 ```
@@ -38,8 +41,28 @@ To run the CLI without building the executable use:
 # Interactive shell
 go run .
 
+# Read file
+go run . <file>
+
+# HTTP server
+go run . --serve
+
 # Help
 go run . --help
 ```
+
+## Screenshots
+
+### 1. Interactive shell
+
+![Interactive shell](screenshots/1.png "Interactive shell")
+
+### 2. Reading from file
+
+![Reading from file](screenshots/2.png "Reading from file")
+
+### 3. POST request via server
+
+![POST request](screenshots/3.png "POST request")
 
 ## Made with [<img height="20" style="margin-bottom:-1px" src="https://go.dev/images/go-logo-blue.svg">](https://go.dev)
