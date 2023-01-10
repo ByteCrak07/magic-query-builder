@@ -19,6 +19,15 @@ func HandleArguments() {
 	if strings.HasPrefix(arg, "-") {
 		if arg == "--help" {
 			printHelp()
+		} else if arg == "--serve" {
+			var port string
+			if len(os.Args) == 3 {
+				port = os.Args[2]
+			} else {
+				port = "5000"
+			}
+
+			handleServer(port)
 		} else {
 			printArgError()
 		}
@@ -43,9 +52,10 @@ func HandleArguments() {
 func printHelp() {
 	fmt.Printf("usage: %v [option]\n", os.Args[0])
 	fmt.Println("Available options")
-	fmt.Printf("-      : simply run \"%v\" to run program in an interactive shell\n", os.Args[0])
-	fmt.Println("<file> : read and run program from an input file")
-	fmt.Println("--help : show help")
+	fmt.Printf("-       : simply run \"%v\" to run program in an interactive shell\n", os.Args[0])
+	fmt.Println("<file>  : read and run program from an input file")
+	fmt.Println("--serve : start a server at 5000 (default port) or at a given port no (use: --serve <port>)")
+	fmt.Println("--help  : show help")
 	os.Exit(0)
 }
 
